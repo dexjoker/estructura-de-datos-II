@@ -7,26 +7,35 @@ package calculadoravictor;
 
 /**
  *
- * @author Laboratorio5Pc8
+ * @author JOKER
  */
-public class Sumar {public double num1;
+public class Sumar {
+    public double num1;
     public double num2;
-    public double resultado;
+    
     public Sumar(){}
-    public Sumar(double numero1){
+    public Sumar(double numero1,double numero2){
         this.num1=numero1;
+        this.num2=numero1;
+        
          
      }
 
-     public static double suma1N(double n){
-                if(n == 1)  //caso base
-              return 1;
-           else
-              return n + suma1N(n-1);
-    }
-    public Double obtenerSuma(){
-    return this.num1;
-    }
+     public static double suma1N(double a,double b){
+     if (b == 0) {
+            return a;
+        } else if (a == 0) {
+            return b;
+        } else {
+            return 1 + suma1N(a, b - 1);
+        }
+      }
+ public Double obtenerSuma(){
+   return this.num1;
+   //return this.num2;
+  }
     
 }
          
+    
+    
